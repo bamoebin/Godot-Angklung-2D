@@ -2,9 +2,6 @@ YouTube: https://youtu.be/_kVfO23iJnw
 Figma: https://www.figma.com/design/DL0vuVzO7AAKZJqVCXxb15/Untitled?node-id=0-1&t=8M51sLkLYyw3oFY0-1
 Drive: https://drive.google.com/drive/folders/1eHnUoTaQz8AU17DFQTEWPEG6XZYPOCdm?usp=drive_link
 
-
-[*Untuk desain motif, saya bekerjasama dengan kelas sebelah karena menggunakan motif yang sama. Tetapi, implementasi desain ke C# tetap dikerjakan perorangan.]
-
 =================================================================
               ANGKLUNG 8 NADA - VIRTUAL SIMULATOR
 =================================================================

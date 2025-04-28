@@ -1,0 +1,226 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2fhuj0cm2drc"]
+
+[ext_resource type="Script" path="res://Scripts/Scenes/Welcome.cs" id="1_p5cyx"]
+[ext_resource type="Texture2D" uid="uid://cv353b5vufqqg" path="res://Assets/Clouds 1/1.png" id="2_52ely"]
+[ext_resource type="Texture2D" uid="uid://b21qoqe05ygrm" path="res://Assets/Clouds 1/2.png" id="3_2eivw"]
+[ext_resource type="Script" path="res://Scripts/Mainmenu/Background1.cs" id="4_6hkan"]
+[ext_resource type="Script" path="res://Scripts/Mainmenu/Background2.cs" id="5_2yh3r"]
+[ext_resource type="Texture2D" uid="uid://cxese3by4morg" path="res://Assets/Clouds 1/4.png" id="5_jqv7a"]
+[ext_resource type="Texture2D" uid="uid://c3biqkate0q4u" path="res://Assets/Clouds 1/clouds_shape8_5.png" id="6_vmxr2"]
+[ext_resource type="Texture2D" uid="uid://tev0rrp6hhnq" path="res://Assets/KOMGRAF-PRAKTIK-2-19-2025.png" id="8_8ted1"]
+[ext_resource type="Texture2D" uid="uid://cnfehmrnowdpn" path="res://Assets/GUI/Tombol.png" id="9_mw208"]
+[ext_resource type="Texture2D" uid="uid://ct7f3l7qx68lp" path="res://Assets/GUI/TombolHover.png" id="10_squ3r"]
+[ext_resource type="FontFile" uid="uid://qagotp0htk0y" path="res://Assets/Font/Pixelme.ttf" id="11_bieov"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nogf3"]
+
+[node name="Welcome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p5cyx")
+metadata/_edit_vertical_guides_ = [472.0, 673.0]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="Sprite2D" parent="MarginContainer"]
+texture_filter = 1
+position = Vector2(571, 184)
+scale = Vector2(2.25347, 2.59259)
+texture = ExtResource("2_52ely")
+
+[node name="background1" type="Sprite2D" parent="MarginContainer"]
+texture_filter = 1
+position = Vector2(0, 1)
+scale = Vector2(2.1066, 1.78731)
+texture = ExtResource("3_2eivw")
+offset = Vector2(275.402, 195.733)
+script = ExtResource("4_6hkan")
+
+[node name="Node2D2" type="Node2D" parent="MarginContainer"]
+texture_filter = 1
+script = ExtResource("5_2yh3r")
+
+[node name="background2" type="Sprite2D" parent="MarginContainer/Node2D2"]
+position = Vector2(773, 434)
+scale = Vector2(1.37194, 1.39043)
+texture = ExtResource("5_jqv7a")
+
+[node name="background3" type="Sprite2D" parent="MarginContainer/Node2D2"]
+position = Vector2(2.38419e-07, 431)
+scale = Vector2(1.31969, 1.37654)
+texture = ExtResource("5_jqv7a")
+
+[node name="Node2D" type="Node2D" parent="MarginContainer"]
+texture_filter = 1
+
+[node name="background3" type="Sprite2D" parent="MarginContainer/Node2D"]
+position = Vector2(20, 47)
+scale = Vector2(1.76471, 1.76471)
+texture = ExtResource("6_vmxr2")
+
+[node name="background4" type="Sprite2D" parent="MarginContainer/Node2D"]
+position = Vector2(711, 135)
+scale = Vector2(1.28485, 1.55882)
+texture = ExtResource("6_vmxr2")
+
+[node name="Judul" type="Sprite2D" parent="."]
+position = Vector2(577, 171)
+scale = Vector2(0.522667, 0.522667)
+texture = ExtResource("8_8ted1")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 2
+offset_left = 470.0
+offset_top = 256.0
+offset_right = 667.0
+offset_bottom = 569.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nogf3")
+
+[node name="BtnKaryas" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_right = 57.5
+offset_bottom = 68.0
+grow_horizontal = 2
+texture_normal = ExtResource("9_mw208")
+texture_hover = ExtResource("10_squ3r")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Karya-karya" type="Label" parent="Panel/BtnKaryas"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -11.0
+offset_right = 51.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_bieov")
+text = "Karya-karya"
+
+[node name="BtnGuide" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.363
+anchor_right = 0.5
+anchor_bottom = 0.363
+offset_left = -58.5
+offset_top = -33.619
+offset_right = 56.5
+offset_bottom = 38.381
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_mw208")
+texture_hover = ExtResource("10_squ3r")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Guide" type="Label" parent="Panel/BtnGuide"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_bieov")
+text = "Guide"
+horizontal_alignment = 1
+
+[node name="BtnAbout" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.607
+anchor_right = 0.5
+anchor_bottom = 0.607
+offset_left = -57.5
+offset_top = -33.991
+offset_right = 57.5
+offset_bottom = 34.009
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("9_mw208")
+texture_hover = ExtResource("10_squ3r")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="About" type="Label" parent="Panel/BtnAbout"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_bieov")
+text = "About"
+horizontal_alignment = 1
+
+[node name="BtnExit" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -86.0
+offset_right = 57.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("9_mw208")
+texture_hover = ExtResource("10_squ3r")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Exit" type="Label" parent="Panel/BtnExit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_bieov")
+text = "Exit"
+horizontal_alignment = 1

@@ -1,0 +1,262 @@
+[gd_scene load_steps=12 format=3 uid="uid://cioe21a1uejr1"]
+
+[ext_resource type="Texture2D" uid="uid://cv353b5vufqqg" path="res://Assets/Clouds 1/1.png" id="1_gu5ty"]
+[ext_resource type="Texture2D" uid="uid://b21qoqe05ygrm" path="res://Assets/Clouds 1/2.png" id="2_cc7km"]
+[ext_resource type="Script" path="res://Scripts/Mainmenu/Background1.cs" id="3_ct2xx"]
+[ext_resource type="Script" path="res://Scripts/Mainmenu/Background2.cs" id="4_2qnrg"]
+[ext_resource type="Texture2D" uid="uid://cxese3by4morg" path="res://Assets/Clouds 1/4.png" id="5_8lna5"]
+[ext_resource type="Texture2D" uid="uid://c3biqkate0q4u" path="res://Assets/Clouds 1/clouds_shape8_5.png" id="6_2tbjw"]
+[ext_resource type="Texture2D" uid="uid://cnfehmrnowdpn" path="res://Assets/GUI/Tombol.png" id="7_dlhde"]
+[ext_resource type="Texture2D" uid="uid://ct7f3l7qx68lp" path="res://Assets/GUI/TombolHover.png" id="8_07jbf"]
+[ext_resource type="Script" path="res://Scripts/Button/SceneButton.cs" id="9_s30vc"]
+[ext_resource type="FontFile" uid="uid://qagotp0htk0y" path="res://Assets/Font/Pixelme.ttf" id="10_0e8iw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kj70"]
+
+[node name="Karyas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="Sprite2D" parent="MarginContainer"]
+texture_filter = 1
+position = Vector2(571, 184)
+scale = Vector2(2.25347, 2.59259)
+texture = ExtResource("1_gu5ty")
+
+[node name="background1" type="Sprite2D" parent="MarginContainer"]
+texture_filter = 1
+position = Vector2(0, 1)
+scale = Vector2(2.1066, 1.78731)
+texture = ExtResource("2_cc7km")
+offset = Vector2(275.402, 195.733)
+script = ExtResource("3_ct2xx")
+
+[node name="Node2D2" type="Node2D" parent="MarginContainer"]
+texture_filter = 1
+script = ExtResource("4_2qnrg")
+
+[node name="background2" type="Sprite2D" parent="MarginContainer/Node2D2"]
+position = Vector2(773, 434)
+scale = Vector2(1.37194, 1.39043)
+texture = ExtResource("5_8lna5")
+
+[node name="background3" type="Sprite2D" parent="MarginContainer/Node2D2"]
+position = Vector2(2.38419e-07, 431)
+scale = Vector2(1.31969, 1.37654)
+texture = ExtResource("5_8lna5")
+
+[node name="Node2D" type="Node2D" parent="MarginContainer"]
+texture_filter = 1
+
+[node name="background3" type="Sprite2D" parent="MarginContainer/Node2D"]
+position = Vector2(20, 47)
+scale = Vector2(1.76471, 1.76471)
+texture = ExtResource("6_2tbjw")
+
+[node name="background4" type="Sprite2D" parent="MarginContainer/Node2D"]
+position = Vector2(711, 135)
+scale = Vector2(1.28485, 1.55882)
+texture = ExtResource("6_2tbjw")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 1153.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2kj70")
+
+[node name="BtnKarya1" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -263.0
+offset_top = 101.0
+offset_right = -148.0
+offset_bottom = 169.0
+grow_horizontal = 2
+texture_normal = ExtResource("7_dlhde")
+texture_hover = ExtResource("8_07jbf")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("9_s30vc")
+ScenePath = "res://Scenes/006_Motif2D.tscn"
+
+[node name="Label" type="Label" parent="Panel/BtnKarya1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -11.0
+offset_right = 51.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_0e8iw")
+text = "Karya 1"
+horizontal_alignment = 1
+
+[node name="BtnKarya3" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42
+anchor_top = 0.363
+anchor_right = 0.5
+anchor_bottom = 0.363
+offset_left = -63.68
+offset_top = 10.413
+offset_right = -41.0
+offset_bottom = 82.413
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_dlhde")
+texture_hover = ExtResource("8_07jbf")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("9_s30vc")
+ScenePath = "res://Scenes/006_Motit2D_Polygon_Animasi.tscn"
+
+[node name="Label" type="Label" parent="Panel/BtnKarya3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_0e8iw")
+text = "Karya 3"
+horizontal_alignment = 1
+
+[node name="BtnKarya4" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.531
+anchor_top = 0.382
+anchor_right = 0.531
+anchor_bottom = 0.382
+offset_left = -0.774048
+offset_top = -1.91801
+offset_right = 114.226
+offset_bottom = 70.082
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_dlhde")
+texture_hover = ExtResource("8_07jbf")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("9_s30vc")
+ScenePath = "res://Scenes/006_Motif2D_Animasi_dan_Interaksi.tscn"
+
+[node name="Label" type="Label" parent="Panel/BtnKarya4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_0e8iw")
+text = "Karya 4"
+horizontal_alignment = 1
+
+[node name="BtnKarya2" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.607
+anchor_right = 0.5
+anchor_bottom = 0.607
+offset_left = 142.0
+offset_top = -297.943
+offset_right = 257.0
+offset_bottom = -229.943
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("7_dlhde")
+texture_hover = ExtResource("8_07jbf")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("9_s30vc")
+ScenePath = "res://Scenes/006_Motif2D_Animasi.tscn"
+
+[node name="Label" type="Label" parent="Panel/BtnKarya2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -10.5
+offset_right = 51.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_0e8iw")
+text = "Karya 2"
+horizontal_alignment = 1
+
+[node name="BtnBack" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -86.0
+offset_right = 57.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("7_dlhde")
+texture_hover = ExtResource("8_07jbf")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("9_s30vc")
+
+[node name="Label" type="Label" parent="Panel/BtnBack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_0e8iw")
+text = "Back"
+horizontal_alignment = 1

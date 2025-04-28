@@ -1,0 +1,162 @@
+[gd_scene load_steps=10 format=3 uid="uid://cinkhriwjlxiv"]
+
+[ext_resource type="Texture2D" uid="uid://cbympagvrs2ao" path="res://Assets/background_gudut2.png" id="1_oa32s"]
+[ext_resource type="Script" path="res://Scripts/Scenes/Karya4.cs" id="2_cjjnb"]
+[ext_resource type="Script" path="res://Scripts/Button/SceneButton.cs" id="3_3umdf"]
+[ext_resource type="Script" path="res://Scripts/Button/CheckButtonHandler.cs" id="4_2jid3"]
+[ext_resource type="Script" path="res://Scripts/Button/SliderHelper.cs" id="5_xafml"]
+[ext_resource type="Texture2D" uid="uid://cnfehmrnowdpn" path="res://Assets/GUI/Tombol.png" id="6_6suef"]
+[ext_resource type="Texture2D" uid="uid://ct7f3l7qx68lp" path="res://Assets/GUI/TombolHover.png" id="7_uu47w"]
+[ext_resource type="FontFile" uid="uid://qagotp0htk0y" path="res://Assets/Font/Pixelme.ttf" id="8_j1dsj"]
+
+[sub_resource type="Theme" id="Theme_04lg6"]
+
+[node name="Karya4" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [434.0]
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(581, 236)
+scale = Vector2(1.2334, 0.803711)
+texture = ExtResource("1_oa32s")
+
+[node name="Node2DCanvas" type="Node2D" parent="."]
+script = ExtResource("2_cjjnb")
+
+[node name="Control" type="Control" parent="Node2DCanvas"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_right = 1150.0
+offset_bottom = 644.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_04lg6")
+
+[node name="BtnBack" type="Button" parent="Node2DCanvas/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.953
+anchor_right = 0.043
+anchor_bottom = 0.953
+offset_left = -39.235
+offset_top = -26.7321
+offset_right = 39.765
+offset_bottom = 27.2679
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_hover_color = Color(0.749977, 0, 0.360301, 1)
+text = "Back"
+script = ExtResource("3_3umdf")
+ScenePath = "res://Scenes/Karyas.tscn"
+
+[node name="Control2" type="Control" parent="Node2DCanvas" node_paths=PackedStringArray("TargetKarya")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 135.0
+offset_top = 592.0
+offset_right = 734.0
+offset_bottom = 641.0
+script = ExtResource("4_2jid3")
+TargetKarya = NodePath("..")
+
+[node name="CB_FlowerAnim" type="CheckButton" parent="Node2DCanvas/Control2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_right = 122.0
+offset_bottom = 15.5
+grow_vertical = 2
+text = "On/Off animasi bunga"
+
+[node name="Control3" type="Control" parent="Node2DCanvas" node_paths=PackedStringArray("TargetKarya")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 117.0
+offset_bottom = 29.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("5_xafml")
+TargetKarya = NodePath("..")
+
+[node name="SliderRotationSpeed" type="HSlider" parent="Node2DCanvas/Control3"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 609.0
+offset_right = 678.0
+offset_bottom = 625.0
+min_value = 0.1
+max_value = 10.0
+step = 0.1
+value = 4.0
+
+[node name="Label" type="Label" parent="Node2DCanvas/Control3/SliderRotationSpeed"]
+layout_mode = 0
+offset_left = -114.0
+offset_top = -5.0
+offset_right = -12.0
+offset_bottom = 18.0
+text = "Rotasi Bunga"
+
+[node name="SliderFloatingSpeed" type="HSlider" parent="Node2DCanvas/Control3"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 608.0
+offset_right = 1033.0
+offset_bottom = 624.0
+min_value = 0.1
+max_value = 10.0
+step = 0.1
+value = 1.5
+
+[node name="Label" type="Label" parent="Node2DCanvas/Control3/SliderFloatingSpeed"]
+layout_mode = 0
+offset_left = -148.0
+offset_top = -5.0
+offset_right = -13.0
+offset_bottom = 18.0
+text = "Kecepatan Bunga"
+
+[node name="BtnGuide" type="TextureButton" parent="Node2DCanvas"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 1023.0
+offset_top = 6.0
+offset_right = 1138.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_6suef")
+texture_hover = ExtResource("7_uu47w")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("3_3umdf")
+ScenePath = "res://Scenes/Guide.tscn"
+
+[node name="Label" type="Label" parent="Node2DCanvas/BtnGuide"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_j1dsj")
+text = "Guide"
+horizontal_alignment = 1
